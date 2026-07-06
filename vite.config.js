@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/LudoShenn15.github.io/',
   assetsInclude: ['**/*.glb'],
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     emptyOutDir: true
   }
 })
