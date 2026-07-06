@@ -1,0 +1,23 @@
+.lanyard-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: 55%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transform-origin: center right;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .lanyard-wrapper {
+    width: 100%;
+    transform: scale(0.7);
+    transform-origin: center center;
+    opacity: 0.4;
+  }
+}

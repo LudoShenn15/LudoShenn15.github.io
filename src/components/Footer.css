@@ -1,0 +1,26 @@
+footer {
+  padding: 2rem 3rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.06em;
+}
+
+.footer-motto {
+  font-size: 12px;
+  color: var(--acid);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+}

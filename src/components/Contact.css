@@ -1,0 +1,50 @@
+.contact-section { padding: 8rem 3rem; }
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: end;
+}
+
+.contact-big {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.contact-big em {
+  font-style: normal;
+  color: var(--acid);
+}
+
+.contact-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-link-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink-muted);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.contact-link-item:hover .clink-arrow { transform: translate(4px, -4px); }
+
+.clink-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; font-family: 'Space Mono', monospace; }
+.clink-value { font-size: 14px; }
+.clink-arrow { transition: transform 0.2s; }
+
+@media (max-width: 768px) {
+  .contact-section { padding: 5rem 1.5rem; }
+  .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
