@@ -34,14 +34,14 @@ const projects = [
     link: 'http://bluffes-moi.vercel.app/',
     linkText: 'Live'
   },
-  {
+  /*{
     index: '005',
     title: 'Sunshine06',
     tags: ['React', 'Three.js', '3D', 'Vercel'],
     description: 'Site anniversaire interactif en 3D. Scènes Three.js, animations, atmosphère. Offert à une amie — construit avec soin.',
     link: 'https://sunshine06.netlify.app/',
     linkText: 'Live'
-  },
+  },*/
 ]
 
 function Projects() {

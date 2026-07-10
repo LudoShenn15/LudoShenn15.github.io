@@ -1,23 +1,20 @@
 import { motion } from 'framer-motion'
-// import Lanyard from './Lanyard'
+import Lanyard from './Lanyard'
 import './Hero.css'
 
 function Hero() {
   return (
     <section className="hero">
-      {/* <Lanyard position={[2, 0, 6]} fov={25} /> */}
+      <Lanyard 
+        position={[0, -2, 20]} 
+        gravity={[0, -40, 0]} 
+        frontImage="/ludo-komi-back.svg"
+        backImage="/ludo.jpg"
+        imageFit="contain"
+        lanyardImage={null}
+      />
       
       <div className="hero-content">
-        <motion.div 
-          className="hero-bg-text"
-          initial={{ x: -100, opacity: 75 }}
-          animate={{ x: -8, opacity: 90 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          aria-hidden="true"
-        >
-          LUDO KOMI
-        </motion.div>
-        
         <motion.p 
           className="hero-label"
           initial={{ opacity: 75, y: 30 }}
@@ -29,8 +26,8 @@ function Hero() {
         
         <motion.h1 
           className="hero-name"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 75, y: 50 }}
+          animate={{ opacity: 100, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
           Komi Ludovic<br />
@@ -45,17 +42,6 @@ function Hero() {
         >
           Je construis des produits à l'intersection du code, du design et de l'intelligence artificielle, pour l'Afrique, et au-delà.
         </motion.p>
-        
-        <motion.div 
-          className="hero-links"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-        >
-          <a href="#projets" className="btn btn-accent">Voir les projets</a>
-          <a href="https://github.com/LudoShenn15" target="_blank" className="btn">GitHub</a>
-          <a href="#contact" className="btn">Me contacter</a>
-        </motion.div>
       </div>
     </section>
   )
