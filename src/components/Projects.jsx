@@ -80,7 +80,12 @@ function Projects() {
             </div>
             <div className="project-right">
               <p className="project-desc">{project.description}</p>
-              <a href={project.link} target="_blank" className="project-link">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
                 {project.linkText}
               </a>
             </div>

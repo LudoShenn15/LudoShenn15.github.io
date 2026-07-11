@@ -26,23 +26,27 @@
   position: relative;
   overflow: hidden;
   cursor: default;
+  transition: transform 0.3s ease;
 }
 
 .design-card:hover .design-card-bg { opacity: 1; }
+.design-card:hover .design-card-visual { opacity: 0.12; transform: scale(1.08); }
+.design-card:hover .design-card-accent-bar { width: 2.5rem; opacity: 1; }
 
 .design-card-bg {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s ease;
 }
 
-.dc-1 .design-card-bg { background: linear-gradient(135deg, #1a0a2e 0%, #0a0a0a 100%); }
-.dc-2 .design-card-bg { background: linear-gradient(135deg, #0a1a0a 0%, #0a0a0a 100%); }
-.dc-3 .design-card-bg { background: linear-gradient(135deg, #2a0a0a 0%, #0a0a0a 100%); }
-.dc-4 .design-card-bg { background: linear-gradient(135deg, #0a0a2a 0%, #0a0a0a 100%); }
-.dc-5 .design-card-bg { background: linear-gradient(135deg, #1a1a0a 0%, #0a0a0a 100%); }
-.dc-6 .design-card-bg { background: linear-gradient(135deg, #1a0a1a 0%, #0a0a0a 100%); }
+/* Each card uses per-card accent color injected via --card-accent */
+.dc-1 .design-card-bg { background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 30%, #0a0a0a) 0%, #0a0a0a 100%); }
+.dc-2 .design-card-bg { background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 30%, #0a0a0a) 0%, #0a0a0a 100%); }
+.dc-3 .design-card-bg { background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 30%, #0a0a0a) 0%, #0a0a0a 100%); }
+.dc-4 .design-card-bg { background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 30%, #0a0a0a) 0%, #0a0a0a 100%); }
+.dc-5 .design-card-bg { background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 30%, #0a0a0a) 0%, #0a0a0a 100%); }
+.dc-6 .design-card-bg { background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 30%, #0a0a0a) 0%, #0a0a0a 100%); }
 
 .design-card-visual {
   position: absolute;
@@ -56,6 +60,8 @@
   letter-spacing: -0.05em;
   pointer-events: none;
   user-select: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  color: var(--card-accent, var(--ink));
 }
 
 .design-card-content { position: relative; z-index: 1; }
@@ -72,6 +78,17 @@
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.design-card-accent-bar {
+  display: block;
+  height: 2px;
+  width: 0;
+  opacity: 0;
+  background: var(--card-accent, var(--acid));
+  border-radius: 1px;
+  transition: width 0.35s ease, opacity 0.35s ease;
 }
 
 @media (max-width: 768px) {

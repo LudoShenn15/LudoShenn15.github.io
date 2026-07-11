@@ -2,12 +2,48 @@ import { motion } from 'framer-motion'
 import './Design.css'
 
 const designCards = [
-  { label: 'Branding', name: 'Miséricordia', visual: 'M', className: 'dc-1' },
-  { label: 'Identité', name: 'Génoa', visual: 'G', className: 'dc-2' },
-  { label: 'UI/UX', name: 'Dokey App', visual: 'D', className: 'dc-3' },
-  { label: 'UI Design', name: 'Reality Quest', visual: 'RQ', className: 'dc-4' },
-  { label: 'Illustration', name: 'Dark Series', visual: '★', className: 'dc-5' },
-  { label: 'Branding', name: 'Clic & Crée', visual: 'CC', className: 'dc-6' },
+  {
+    label: 'Branding',
+    name: 'Miséricordia',
+    visual: 'M',
+    className: 'dc-1',
+    accent: '#7c3aed'
+  },
+  {
+    label: 'Identité',
+    name: 'Génoa',
+    visual: 'G',
+    className: 'dc-2',
+    accent: '#16a34a'
+  },
+  {
+    label: 'UI/UX',
+    name: 'Dokey App',
+    visual: 'D',
+    className: 'dc-3',
+    accent: '#dc2626'
+  },
+  {
+    label: 'UI Design',
+    name: 'Reality Quest',
+    visual: 'RQ',
+    className: 'dc-4',
+    accent: '#2563eb'
+  },
+  {
+    label: 'Illustration',
+    name: 'Dark Series',
+    visual: '★',
+    className: 'dc-5',
+    accent: 'hsl(49, 100%, 50%)'
+  },
+  {
+    label: 'Branding',
+    name: 'Clic & Crée',
+    visual: 'CC',
+    className: 'dc-6',
+    accent: '#db2777'
+  },
 ]
 
 function Design() {
@@ -39,6 +75,7 @@ function Design() {
           <motion.div
             key={card.name}
             className={`design-card ${card.className}`}
+            style={{ '--card-accent': card.accent }}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -50,6 +87,7 @@ function Design() {
             <div className="design-card-content">
               <p className="design-card-label">{card.label}</p>
               <p className="design-card-name">{card.name}</p>
+              <span className="design-card-accent-bar" aria-hidden="true"></span>
             </div>
           </motion.div>
         ))}

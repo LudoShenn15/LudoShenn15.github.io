@@ -28,7 +28,8 @@ export default function Lanyard({
   backImage = null,
   imageFit = 'cover',
   lanyardImage = null,
-  lanyardWidth = 1
+  lanyardWidth = 0.5,
+  bandColor = '#F0EDE8'
 }) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
 
@@ -55,6 +56,7 @@ export default function Lanyard({
             imageFit={imageFit}
             lanyardImage={lanyardImage}
             lanyardWidth={lanyardWidth}
+            bandColor={bandColor}
           />
         </Physics>
         <Environment blur={0.75}>
@@ -100,7 +102,8 @@ function Band({
   backImage = null,
   imageFit = 'cover',
   lanyardImage = null,
-  lanyardWidth = 1
+  lanyardWidth = 0.5,
+  bandColor = '#F0EDE8'
 }) {
   const band = useRef(),
     fixed = useRef(),
@@ -263,7 +266,7 @@ function Band({
       <mesh ref={band}>
         <meshLineGeometry />
         <meshLineMaterial
-          color="black"
+          color={bandColor}
           depthTest={false}
           resolution={isMobile ? [1000, 2000] : [1000, 1000]}
           lineWidth={lanyardWidth}

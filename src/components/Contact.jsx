@@ -2,12 +2,15 @@ import { motion } from 'framer-motion'
 import './Contact.css'
 
 const contactLinks = [
-  { label: 'GitHub', value: 'LudoShenn15', href: 'https://github.com/LudoShenn15' },
-  { label: 'Instagram', value: '@komi_ludo', href: 'https://www.instagram.com/komi_ludo/' },
-  { label: 'Email', value: 'Sherfieldstr@gmail.com', href: 'mailto:Sherfieldstr@gmail.com' },
+  { label: 'GitHub', value: 'LudoShenn15', href: 'https://github.com/LudoShenn15', external: true },
+  { label: 'Instagram', value: '@komi_ludo', href: 'https://www.instagram.com/komi_ludo/', external: true },
+  { label: 'LinkedIn', value: 'Komi Ludovic Agbo', href: 'https://www.linkedin.com/in/komi-ludovic-agbo/', external: true },
+  { label: 'Email', value: 'Sherfieldstr@gmail.com', href: 'mailto:Sherfieldstr@gmail.com', external: false },
 ]
 
 function Contact() {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
     <section id="contact" className="contact-section">
       <motion.div 
@@ -34,6 +37,13 @@ function Contact() {
             quelque<br />
             chose <em>.</em>
           </h3>
+          <button
+            className="btn btn-accent contact-cta"
+            onClick={scrollToTop}
+            aria-label="Retour en haut de page"
+          >
+            ↑ Retour en haut
+          </button>
         </motion.div>
 
         <motion.div
@@ -47,7 +57,8 @@ function Contact() {
               <motion.a
                 key={link.label}
                 href={link.href}
-                target={link.label !== 'Email' ? '_blank' : undefined}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
                 className="contact-link-item"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
