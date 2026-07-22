@@ -6,7 +6,7 @@ const projects = [
     index: '001',
     title: 'Reality Quest',
     tags: ['React', 'Supabase', 'Claude API', 'PWA'],
-    description: 'RPG gamifié pour le campus universitaire. XP, rangs, badges, chasse au trésor en temps réel. Aesthetic Solo Leveling. Vision AI pour la reconnaissance de campus.',
+    description: 'RPG gamifié sur notre vie réelle pour une meilleure productivité dans nos objectifs quotidiens, XP, rangs, badges, chasse au trésor en temps réel etc.',
     link: 'https://github.com/LudoShenn15',
     linkText: 'GitHub'
   },
