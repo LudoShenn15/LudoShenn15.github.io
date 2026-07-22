@@ -32,10 +32,9 @@ function About() {
           transition={{ duration: 0.6 }}
         >
           <p className="about-text">
-            Troisième année de génie logiciel à l'<strong>UCAO-UUT, Lomé</strong>. En parallèle, freelance en design graphique et illustration.<br /><br />
-            Je construis des produits qui combinent <strong>code, design et IA</strong> — avec une vision ancrée dans la réalité africaine. Connectivité limitée, jeunesse créative, marché sous-servi. Ce sont des contraintes qui inspirent des solutions.<br /><br />
-            Je dessine, je peins. Je joue au basketball. Je lis des mangas. Je crée un projet poétique appelé <strong>Dark</strong>.
-          </p>
+            Développeur <full-satck>full-stack</full-satck>, graphiste freelance et illustrateur — je façonne des produits à l'intersection du <strong>code, du design et de l'IA</strong>.<br /><br />
+            Je construis avec une vision ancrée dans la réalité africaine. Connectivité limitée, jeunesse créative, marché sous-servi. Ce sont des contraintes qui inspirent des solutions concrètes et des interfaces qui <strong>fonctionnent vraiment</strong>.<br /><br />
+            En dehors des écrans — je dessine, je peins, je joue au basketball, je lis des mangas. Je travaille sur un projet poétique appelé <strong>Dark</strong>.
           <blockquote className="about-quote">
             "Let's Make It Burn."
           </blockquote>
